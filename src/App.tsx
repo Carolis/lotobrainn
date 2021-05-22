@@ -2,6 +2,7 @@ import React from 'react'
 import Main from './components/Main'
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
+import { BrowserRouter } from 'react-router-dom'
 
 const App: React.FC = () => {
   const client = new ApolloClient({
@@ -10,9 +11,11 @@ const App: React.FC = () => {
   })
 
   return (
-    <ApolloProvider client={client}>
-      <Main />
-    </ApolloProvider>
+    <BrowserRouter>
+      <ApolloProvider client={client}>
+        <Main />
+      </ApolloProvider>
+    </BrowserRouter>
   )
 }
 
