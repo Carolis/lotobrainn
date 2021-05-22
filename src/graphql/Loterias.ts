@@ -1,7 +1,7 @@
 import { gql } from '@apollo/client'
 
-export const GET_LOTERIAS = gql`
-  query getLoterias {
+export const LOTERIAS = gql`
+  query Loterias {
     loterias {
       id
       nome
