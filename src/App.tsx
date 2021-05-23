@@ -1,8 +1,8 @@
 import React from 'react'
-import Main from './components/Main'
+import Main from './components/Main/Main'
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 
 const App: React.FC = () => {
   const client = new ApolloClient({
@@ -11,11 +11,29 @@ const App: React.FC = () => {
   })
 
   return (
-    <BrowserRouter>
-      <ApolloProvider client={client}>
-        <Main />
-      </ApolloProvider>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <Switch>
+          <Route
+            path={[
+              '/mega-sena',
+              '/quina',
+              '/lotofacil',
+              '/lotomania',
+              '/timemania',
+              '/dia-de-sorte'
+            ]}
+            component={Main}
+          />
+          <Route exact path={'/'}>
+            <Redirect to={'/mega-sena'} />
+          </Route>
+          <Route>
+            <Redirect to={'/'} />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </ApolloProvider>
   )
 }
 
