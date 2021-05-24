@@ -1,6 +1,6 @@
 export type LotteryContextState = {
   activeLottery: Lottery
-  setActiveLottery: any
+  setActiveLottery: Lottery
 }
 
 type Lottery = {
