@@ -1,5 +1,5 @@
 import React from 'react'
-import Main from './components/Main/Main'
+import MainWrapper from './components/MainWrapper/MainWrapper'
 
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
@@ -23,7 +23,7 @@ const App: React.FC = () => {
               '/timemania',
               '/dia-de-sorte'
             ]}
-            component={Main}
+            component={MainWrapper}
           />
           <Route exact path={'/'}>
             <Redirect to={'/mega-sena'} />
