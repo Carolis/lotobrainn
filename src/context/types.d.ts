@@ -7,4 +7,5 @@ type Lottery = {
   name: string
   id: string
   lotteryTheme: string
+  activeBet: string
 }
