@@ -1,13 +1,12 @@
 import React from 'react'
-import ComboBox from '../ComboBox/ComboBox'
+import Header from '../Header/Header'
 import LotteryProvider from '../../context/Lottery'
 
 const MainWrapper: React.FC = () => {
   return (
-    // ThemeProvider
     <LotteryProvider>
       <div>
-        <ComboBox />
+        <Header />
       </div>
     </LotteryProvider>
   )
