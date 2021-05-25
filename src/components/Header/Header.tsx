@@ -24,7 +24,7 @@ const Header: React.FC = () => {
           <StyledLogo />
           <HeaderTitle>{activeLottery.name}</HeaderTitle>
         </LogoWrapper>
-        {width > size.desktop ? (
+        {width >= size.desktop ? (
           <span>seila</span>
         ) : (
           <span>Concurso Nº {activeLottery.activeBet}</span>
