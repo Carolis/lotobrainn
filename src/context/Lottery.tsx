@@ -3,8 +3,9 @@ import { LotteryContextState } from './types'
 
 const contextDefaultValues: LotteryContextState = {
   activeLottery: {
-    name: 'mega-sena',
-    id: 0
+    name: '',
+    id: '',
+    lotteryTheme: ''
   },
   setActiveLottery: () => {
     null

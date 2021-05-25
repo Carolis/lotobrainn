@@ -1,9 +1,10 @@
 export type LotteryContextState = {
   activeLottery: Lottery
-  setActiveLottery: any
+  setActiveLottery: (lottery: Lottery) => void
 }
 
 type Lottery = {
   name: string
-  id: number
+  id: string
+  lotteryTheme: string
 }
