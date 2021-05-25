@@ -7,7 +7,7 @@ import { LOTERIAS } from '../../graphql/Loterias'
 import { CONCURSOS_LOTERIAS } from '../../graphql/ConcursosLoterias'
 
 import { themeColors } from '../../styles/themes/themes'
-
+import { ComboBoxSelect, Select } from './styles'
 interface Lottery {
   nome: string
   id: string
@@ -74,9 +74,11 @@ const ComboBox: React.FC = () => {
       }
     )
     return (
-      <select value={activeLottery.name} onChange={handleLottery}>
-        {lotteryOptions}
-      </select>
+      <ComboBoxSelect>
+        <Select value={activeLottery.name} onChange={handleLottery}>
+          {lotteryOptions}
+        </Select>
+      </ComboBoxSelect>
     )
   }
   return null

@@ -1,11 +1,14 @@
 import React from 'react'
 import ComboBox from '../ComboBox/ComboBox'
-import { Container } from './styles'
 import GlobalStyles from '../../styles/global'
 import { useLottery } from '../../context/Lottery'
 import { ThemeProvider } from 'styled-components'
+import useWindowSize from '../../hooks/useWindowSize'
+import { HeaderTitle, HeaderSidebar, StyledLogo, LogoWrapper } from './styles'
+import { size } from '../../styles/sizes'
 
 const Header: React.FC = () => {
+  const { width } = useWindowSize()
   const { activeLottery } = useLottery()
   const theme = {
     colors: {
@@ -14,10 +17,19 @@ const Header: React.FC = () => {
   }
   return (
     <ThemeProvider theme={theme}>
-      <Container>
-        <GlobalStyles />
+      <GlobalStyles />
+      <HeaderSidebar>
         <ComboBox />
-      </Container>
+        <LogoWrapper>
+          <StyledLogo />
+          <HeaderTitle>{activeLottery.name}</HeaderTitle>
+        </LogoWrapper>
+        {width > size.desktop ? (
+          <span>seila</span>
+        ) : (
+          <span>Concurso Nº {activeLottery.activeBet}</span>
+        )}
+      </HeaderSidebar>
     </ThemeProvider>
   )
 }
