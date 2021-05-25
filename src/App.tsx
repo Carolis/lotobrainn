@@ -16,17 +16,17 @@ const App: React.FC = () => {
         <Switch>
           <Route
             path={[
-              '/mega-sena',
+              '/megasena',
               '/quina',
               '/lotofacil',
               '/lotomania',
               '/timemania',
-              '/dia-de-sorte'
+              '/diadesorte'
             ]}
             component={MainWrapper}
           />
           <Route exact path={'/'}>
-            <Redirect to={'/mega-sena'} />
+            <Redirect to={'/megasena'} />
           </Route>
           <Route>
             <Redirect to={'/'} />

@@ -3,6 +3,7 @@ import { useQuery } from '@apollo/client'
 import { useLottery } from '../../context/Lottery'
 import { LOTERIAS } from '../../graphql/Loterias'
 import { themeColors } from '../../styles/themes/themes'
+import { useHistory } from 'react-router-dom'
 
 interface Lottery {
   nome: string
@@ -12,6 +13,7 @@ interface Lottery {
 
 const ComboBox: React.FC = () => {
   const { activeLottery, setActiveLottery } = useLottery()
+  const history = useHistory()
 
   const {
     data: dataLoterias,
@@ -23,7 +25,9 @@ const ComboBox: React.FC = () => {
     const lotteryActiveId = e.target.children[e.target.selectedIndex].id
 
     let activeTheme = '#FFF'
-    const normalizedValue = e.target.value.replace(/-|\s/g, '')
+    const normalizedValue = e.target.value
+      .normalize('NFD')
+      .replace(/-|\s|[^a-zA-Zs]/g, '')
 
     if (themeColors[normalizedValue]?.length) {
       activeTheme = themeColors[normalizedValue]
@@ -34,6 +38,8 @@ const ComboBox: React.FC = () => {
       id: lotteryActiveId,
       lotteryTheme: activeTheme
     })
+
+    history.push(`/${normalizedValue}`)
   }
 
   if (loadingLoterias) {
