@@ -13,6 +13,10 @@ export const HeaderSidebar = styled.aside`
 
 export const StyledLogo = styled(Logo)`
   width: 6rem;
+  margin: 0 0 1rem 0;
+  @media ${device.desktop} {
+    margin: 0 2rem 0 0;
+  }
 `
 export const LogoWrapper = styled.div`
   display: flex;
