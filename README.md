@@ -1,16 +1,30 @@
-# LotoBrainn
+<p align="center">
+  <h2 align="center">LotoBrainn</h2>
 
-## Decisões de arquitetura
+  <h1 align="center"><img src="./public/favicon.ico" alt="Logo do Typescript" width="32"></h1>
+
+  <p align="center">    
+    <br />
+    <a href="https://github.com/brainnco-exs/challenge-carolis/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/brainnco-exs/challenge-carolis/issues">Request Feature</a>
+  </p>
+</p>
+
+## Decisões de arquitetura da aplicação
 
 CRA com template Typescript
 
 Styled Components
 
-GraphQL com Apollo
+GraphQL com Apollo Client
+
+React Router DOM
 
 Cypress
 
-## Comandos CLI disponíveis na aplicação
+## Comandos CLI disponíveis para rodar a aplicação
+
 
 `yarn start`  Roda a aplicação em modo desenvolvimento na porta [http://localhost:3000](http://localhost:3000)
 
@@ -26,10 +40,11 @@ Cypress
 
 ## Queries disponíveis na aplicação
 
-`GET_LOTERIAS:` Retorna se o tipo é megasena, quina, lotofacil, lotomania, timemania ou dia de sorte.
+
+`LOTERIAS:` Retorna se o tipo é megasena, quina, lotofacil, lotomania, timemania ou dia de sorte.
 
 ```
-query GET_LOTERIAS {
+query LOTERIAS {
     loterias {
       id
       nome
@@ -37,10 +52,10 @@ query GET_LOTERIAS {
 }
 ```
 
-`GET_LOTERIAS_CONCURSOS:` Retorna os ids de concursos correspondentes ao tipo de loteria.
+`CONCURSOS_LOTERIAS:` Retorna os ids de concursos correspondentes ao tipo de loteria.
 
 ```
-query GET_LOTERIAS_CONCURSOS {
+query CONCURSOS_LOTERIAS {
   loteriasConcursos {
     loteriaId
     concursoId
@@ -49,10 +64,10 @@ query GET_LOTERIAS_CONCURSOS {
 
 ```
 
-`GET_CONCURSO:` Retorna dados sobre determinado concurso, recebe como argumento obrigatorio o id de um concurso feito em uma loteria.
+`CONCURSOS:` Retorna dados sobre determinado concurso, recebe como argumento obrigatorio o id de um concurso feito em uma loteria.
 
 ```
-query GET_CONCURSO ($id: ID!) {
+query CONCURSOS ($id: ID!) {
   concurso(id: $id) {
     id
     loteria
