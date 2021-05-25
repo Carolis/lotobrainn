@@ -2,10 +2,12 @@ import React from 'react'
 import { useQuery } from '@apollo/client'
 import { useLottery } from '../../context/Lottery'
 import { LOTERIAS } from '../../graphql/Loterias'
+import { themeColors } from '../../styles/themes/themes'
 
 interface Lottery {
   nome: string
   id: string
+  lotteryTheme: string
 }
 
 const ComboBox: React.FC = () => {
@@ -19,11 +21,23 @@ const ComboBox: React.FC = () => {
 
   const handleLottery = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const lotteryActiveId = e.target.children[e.target.selectedIndex].id
-    setActiveLottery({ name: e.target.value, id: lotteryActiveId })
+
+    let activeTheme = '#FFF'
+    const normalizedValue = e.target.value.replace(/-|\s/g, '')
+
+    if (themeColors[normalizedValue]?.length) {
+      activeTheme = themeColors[normalizedValue]
+    }
+
+    setActiveLottery({
+      name: e.target.value,
+      id: lotteryActiveId,
+      lotteryTheme: activeTheme
+    })
   }
 
   if (loadingLoterias) {
-    return <div>Loading</div>
+    return <div>Loading</div> //TODO: add skeleton
   }
 
   if (errorLoterias) {
