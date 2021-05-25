@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../Header/Header'
+import Result from '../Result/Result'
 import LotteryProvider from '../../context/Lottery'
 
 const MainWrapper: React.FC = () => {
@@ -7,6 +8,7 @@ const MainWrapper: React.FC = () => {
     <LotteryProvider>
       <div>
         <Header />
+        <Result />
       </div>
     </LotteryProvider>
   )
