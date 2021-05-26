@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Footer: React.FC = () => {
+const Footer = (): JSX.Element => {
   return (
     <FooterContainer>
       <p>

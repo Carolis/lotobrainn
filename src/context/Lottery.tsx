@@ -1,6 +1,10 @@
 import React, { createContext, useState, useContext } from 'react'
 import { LotteryContextState } from './types'
 
+interface Props {
+  children: JSX.Element | JSX.Element[]
+}
+
 const contextDefaultValues: LotteryContextState = {
   activeLottery: {
     name: 'mega-sena',
@@ -15,7 +19,7 @@ const contextDefaultValues: LotteryContextState = {
 
 const LotteryContext = createContext<LotteryContextState>(contextDefaultValues)
 
-const LotteryProvider: React.FC = ({ children }) => {
+const LotteryProvider = ({ children }: Props): JSX.Element => {
   const [activeLottery, setActiveLottery] = useState(
     contextDefaultValues.activeLottery
   )

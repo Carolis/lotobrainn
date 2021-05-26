@@ -4,7 +4,7 @@ import MainWrapper from './components/MainWrapper/MainWrapper'
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom'
 
-const App: React.FC = () => {
+const App = (): JSX.Element => {
   const client = new ApolloClient({
     cache: new InMemoryCache(),
     uri: 'https://brainn-api-loterias.herokuapp.com/graphql'

@@ -5,7 +5,7 @@ import { CONCURSOS } from '../../graphql/Concursos'
 import { ResultContainer } from './styles'
 import { ConcursoLoader } from '../Loader/Loader'
 
-const Result: React.FC = () => {
+const Result = (): JSX.Element => {
   const { activeLottery } = useLottery()
 
   const { loading: loadingConcurso, data: concursoData } = useQuery(CONCURSOS, {

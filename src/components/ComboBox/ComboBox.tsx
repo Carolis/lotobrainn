@@ -9,13 +9,14 @@ import { CONCURSOS_LOTERIAS } from '../../graphql/ConcursosLoterias'
 import { themeColors } from '../../styles/themes/themes'
 import { ComboBoxSelect, Select } from './styles'
 import Loader from '../Loader/Loader'
+
 interface Lottery {
   nome: string
   id: string
   lotteryTheme: string
 }
 
-const ComboBox: React.FC = () => {
+const ComboBox = (): JSX.Element | null => {
   const { activeLottery, setActiveLottery } = useLottery()
   const history = useHistory()
 
@@ -27,7 +28,6 @@ const ComboBox: React.FC = () => {
 
   const {
     data: dataLoteriasConcursos,
-    loading: loadingLoteriasConcursos,
     error: errorLoteriasConcursos
   } = useQuery(CONCURSOS_LOTERIAS)
 
@@ -65,7 +65,7 @@ const ComboBox: React.FC = () => {
   }
 
   if (errorLoterias || errorLoteriasConcursos) {
-    throw new Error('Error loading "Loterias"')
+    throw new Error('Error fetching "Loterias" query')
   }
 
   if (dataLoterias && dataLoteriasConcursos) {

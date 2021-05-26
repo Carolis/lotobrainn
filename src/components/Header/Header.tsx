@@ -7,7 +7,7 @@ import useWindowSize from '../../hooks/useWindowSize'
 import { HeaderTitle, HeaderSidebar, StyledLogo, LogoWrapper } from './styles'
 import { size } from '../../styles/sizes'
 
-const Header: React.FC = () => {
+const Header = (): JSX.Element => {
   const { width } = useWindowSize()
   const { activeLottery } = useLottery()
   const theme = {

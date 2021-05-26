@@ -5,7 +5,7 @@ import Footer from '../Footer/Footer'
 import LotteryProvider from '../../context/Lottery'
 import { MainContainer } from './styles'
 
-const MainWrapper: React.FC = () => {
+const MainWrapper = (): JSX.Element => {
   return (
     <LotteryProvider>
       <MainContainer>
