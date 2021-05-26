@@ -1,6 +1,11 @@
 import React from 'react'
 
-const useWindowSize = () => {
+interface WindowSize {
+  height: number
+  width: number
+}
+
+const useWindowSize = (): WindowSize => {
   const isSSR = typeof window !== 'undefined'
   const [windowSize, setWindowSize] = React.useState({
     width: isSSR ? 1200 : window.innerWidth,
