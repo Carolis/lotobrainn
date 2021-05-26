@@ -1,7 +1,8 @@
 import styled from 'styled-components'
+import { device } from '../../styles/sizes'
 
 export const ResultContainer = styled.ul`
-  height: 45vh;
+  height: clamp(45vh, 45vh, auto);
   width: 100%;
   padding: 2rem;
   display: flex;
@@ -13,8 +14,12 @@ export const ResultContainer = styled.ul`
   flex-wrap: wrap;
   li {
     background-color: #fff;
-    width: clamp(6rem, 6rem, 10rem);
-    height: clamp(6rem, 6rem, 10rem);
+    @media ${device.desktop} {
+      width: 10rem;
+      height: 10rem;
+    }
+    width: 7rem;
+    height: 7rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
