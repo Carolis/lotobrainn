@@ -1,14 +1,20 @@
 import React from 'react'
+import styled from 'styled-components'
 
 const Footer: React.FC = () => {
   return (
-    <footer>
+    <FooterContainer>
       <p>
         Este sorteio é meramente ilustrativo e não possui nenhuma ligação com a
         CAIXA.
       </p>
-    </footer>
+    </FooterContainer>
   )
 }
+
+const FooterContainer = styled.footer`
+  position: fixed;
+  bottom: 0;
+`
 
 export default Footer
