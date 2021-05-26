@@ -3,12 +3,13 @@ import styled from 'styled-components'
 export const ResultContainer = styled.ul`
   height: 45vh;
   width: 100%;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #efefef;
-  clip-path: ellipse(100vw 45%);
-  margin-top: -8rem;
+  clip-path: ellipse(100vw 50%);
+  margin-top: -5rem;
   flex-wrap: wrap;
   li {
     background-color: #fff;

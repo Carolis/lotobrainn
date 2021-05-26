@@ -2,6 +2,8 @@ import React from 'react'
 import { useLottery } from '../../context/Lottery'
 import { useQuery } from '@apollo/client'
 import { CONCURSOS } from '../../graphql/Concursos'
+import { ResultContainer } from './styles'
+import { ConcursoLoader } from '../Loader/Loader'
 
 const Result: React.FC = () => {
   const { activeLottery } = useLottery()
@@ -13,15 +15,19 @@ const Result: React.FC = () => {
   })
 
   if (loadingConcurso) {
-    //todo skeleton
+    return (
+      <ResultContainer>
+        <ConcursoLoader />
+      </ResultContainer>
+    )
   }
 
   return (
-    <ul>
+    <ResultContainer>
       {concursoData?.concurso.numeros?.map((betId: number, index: number) => (
         <li key={`list-item-${index}`}>{betId}</li>
       ))}
-    </ul>
+    </ResultContainer>
   )
 }
 

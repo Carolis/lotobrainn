@@ -8,6 +8,7 @@ import { CONCURSOS_LOTERIAS } from '../../graphql/ConcursosLoterias'
 
 import { themeColors } from '../../styles/themes/themes'
 import { ComboBoxSelect, Select } from './styles'
+import Loader from '../Loader/Loader'
 interface Lottery {
   nome: string
   id: string
@@ -55,8 +56,12 @@ const ComboBox: React.FC = () => {
     history.push(`/${normalizedValue}`)
   }
 
-  if (loadingLoterias || loadingLoteriasConcursos) {
-    return <div>Loading</div> //TODO: add skeleton
+  if (loadingLoterias) {
+    return (
+      <ComboBoxSelect>
+        <Loader />
+      </ComboBoxSelect>
+    )
   }
 
   if (errorLoterias || errorLoteriasConcursos) {
@@ -75,9 +80,11 @@ const ComboBox: React.FC = () => {
     )
     return (
       <ComboBoxSelect>
-        <Select value={activeLottery.name} onChange={handleLottery}>
-          {lotteryOptions}
-        </Select>
+        <div>
+          <Select value={activeLottery.name} onChange={handleLottery}>
+            {lotteryOptions}
+          </Select>
+        </div>
       </ComboBoxSelect>
     )
   }
