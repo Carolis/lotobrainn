@@ -9,6 +9,10 @@ export const MainContainer = styled.div`
   }
 `
 export const MainContentWrapper = styled.div`
+  border-top-left-radius: 70% 5%;
+  border-top-right-radius: 70% 5%;
+  background-color: #efefef;
+  min-height: 50vh;
   @media ${device.desktop} {
     width: 70vw;
     height: 100vh;

@@ -15,14 +15,11 @@ const Footer = (): JSX.Element => {
 const FooterContainer = styled.div`
   font-size: 1.4rem;
   color: #000;
-  position: fixed;
-  bottom: 0;
   padding: 2rem;
   width: 100%;
   background-color: #efefef;
   @media (min-width: 1200px) {
     font-size: 1.6rem;
-    position: unset;
     padding: 0;
   }
   p {

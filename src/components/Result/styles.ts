@@ -7,12 +7,10 @@ export const ResultContainer = styled.ul`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #efefef;
-  border-top-left-radius: 70% 70%;
-  border-top-right-radius: 70% 70%;
   flex-wrap: wrap;
   padding-top: 6rem;
   @media ${device.desktop} {
+    background-color: #efefef;
     display: flex;
     justify-content: space-around;
     align-items: center;
