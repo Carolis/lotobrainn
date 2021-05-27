@@ -4,7 +4,14 @@ import GlobalStyles from '../../styles/global'
 import { useLottery } from '../../context/Lottery'
 import { ThemeProvider } from 'styled-components'
 import useWindowSize from '../../hooks/useWindowSize'
-import { HeaderTitle, HeaderSidebar, StyledLogo, LogoWrapper } from './styles'
+import {
+  HeaderTitle,
+  HeaderSidebar,
+  StyledLogo,
+  LogoWrapper,
+  DateTimeWrapper,
+  DateTime
+} from './styles'
 import { size } from '../../styles/sizes'
 
 const Header = (): JSX.Element => {
@@ -25,7 +32,10 @@ const Header = (): JSX.Element => {
           <HeaderTitle>{activeLottery.name}</HeaderTitle>
         </LogoWrapper>
         {width >= size.desktop ? (
-          <span>seila</span>
+          <DateTimeWrapper>
+            <span>Concurso</span>
+            <DateTime>12341234242</DateTime>
+          </DateTimeWrapper>
         ) : (
           <span>Concurso Nº {activeLottery.activeBet}</span>
         )}

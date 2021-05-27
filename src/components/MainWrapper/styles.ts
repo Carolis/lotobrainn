@@ -14,7 +14,7 @@ export const MainContentWrapper = styled.div`
   background-color: #efefef;
   min-height: 50vh;
   @media ${device.desktop} {
-    width: 70vw;
+    width: 75vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

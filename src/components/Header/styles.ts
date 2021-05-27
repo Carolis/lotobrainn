@@ -11,10 +11,10 @@ export const HeaderSidebar = styled.aside`
   justify-content: space-evenly;
   @media ${device.desktop} {
     height: 100vh;
-    width: 30vw;
+    width: 25vw;
     justify-content: space-between;
-    padding: 6rem 0;
-    align-items: center;
+    padding: 6rem;
+    align-items: flex-start;
   }
 `
 
@@ -33,4 +33,19 @@ export const LogoWrapper = styled.div`
   @media ${device.desktop} {
     flex-direction: row;
   }
+`
+export const DateTimeWrapper = styled.div`
+  display: flex;
+  text-transform: uppercase;
+  flex-direction: column;
+  text-align: left;
+  span {
+    font-size: 1.4rem;
+    letter-spacing: 0.135em;
+    font-weight: 500;
+    color: #fff;
+  }
+`
+export const DateTime = styled.span`
+  color: blue;
 `

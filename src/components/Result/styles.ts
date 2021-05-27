@@ -15,7 +15,7 @@ export const ResultContainer = styled.ul`
     justify-content: center;
     align-items: center;
     padding: 0;
-    min-height: 90vh;
+    min-height: 85vh;
   }
   li {
     background-color: #fff;
