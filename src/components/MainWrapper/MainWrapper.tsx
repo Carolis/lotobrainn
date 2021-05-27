@@ -3,15 +3,17 @@ import Header from '../Header/Header'
 import Result from '../Result/Result'
 import Footer from '../Footer/Footer'
 import LotteryProvider from '../../context/Lottery'
-import { MainContainer } from './styles'
+import { MainContainer, MainContentWrapper } from './styles'
 
 const MainWrapper = (): JSX.Element => {
   return (
     <LotteryProvider>
       <MainContainer>
         <Header />
-        <Result />
-        <Footer />
+        <MainContentWrapper>
+          <Result />
+          <Footer />
+        </MainContentWrapper>
       </MainContainer>
     </LotteryProvider>
   )

@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
     min-height: 100vh;
  }
 
- aside {
+ aside, div {
     background-color: ${(props) => props.theme.colors.primary}
  }
 
@@ -37,18 +37,6 @@ const GlobalStyles = createGlobalStyle`
      @media(min-width: 1200px){
         font-size: 2.7rem;
      }
- }
-
- footer {
-    font-size: 1.4rem;
-    color: #000;
-    @media(min-width: 1200px){
-    font-size: 1.6rem;
-    }
-   p {
-      padding: 2rem;
-      text-align: center;
-   }
  }
 
 `

@@ -5,9 +5,13 @@ export const ComboBoxSelect = styled.div`
   align-items: center;
   justify-content: center;
   div {
+    position: relative;
     :after {
       content: '';
       display: inline-block;
+      position: absolute;
+      top: 50%;
+      right: 10%;
       cursor: pointer;
       width: 1.2rem;
       height: 0.7rem;
@@ -25,6 +29,5 @@ export const Select = styled.select`
   font-weight: 500;
   color: #333;
   padding-left: 3rem;
-  margin-right: -3rem;
   -webkit-appearance: none;
 `

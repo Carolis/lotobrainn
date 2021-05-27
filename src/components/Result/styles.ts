@@ -2,16 +2,25 @@ import styled from 'styled-components'
 import { device } from '../../styles/sizes'
 
 export const ResultContainer = styled.ul`
-  height: clamp(45vh, 45vh, auto);
   width: 100%;
   padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   background-color: #efefef;
-  clip-path: ellipse(100vw 50%);
-  margin-top: -5rem;
+  border-top-left-radius: 70% 70%;
+  border-top-right-radius: 70% 70%;
   flex-wrap: wrap;
+  padding-top: 6rem;
+  @media ${device.desktop} {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0;
+    padding-top: 0;
+    border-top-left-radius: 15% 50%;
+    border-bottom-left-radius: 15% 50%;
+  }
   li {
     background-color: #fff;
     @media ${device.desktop} {

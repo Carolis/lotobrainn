@@ -9,6 +9,13 @@ export const HeaderSidebar = styled.aside`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  @media ${device.desktop} {
+    height: 100vh;
+    width: 30vw;
+    justify-content: space-between;
+    padding: 6rem 0;
+    align-items: center;
+  }
 `
 
 export const StyledLogo = styled(Logo)`
