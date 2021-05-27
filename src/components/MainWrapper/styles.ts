@@ -9,14 +9,20 @@ export const MainContainer = styled.div`
   }
 `
 export const MainContentWrapper = styled.div`
-  border-top-left-radius: 70% 5%;
-  border-top-right-radius: 70% 5%;
+  border-top-left-radius: 70% 10%;
+  border-top-right-radius: 70% 10%;
   background-color: #efefef;
   min-height: 50vh;
   @media ${device.desktop} {
     width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    border-top-left-radius: 15% 50%;
-    border-bottom-left-radius: 15% 50%;
+    border-top-left-radius: 5% 50%;
+    border-bottom-left-radius: 5% 50%;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 `

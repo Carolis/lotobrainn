@@ -8,28 +8,28 @@ export const ResultContainer = styled.ul`
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-top: 6rem;
+  padding-top: 3rem;
+  min-height: 40vh;
   @media ${device.desktop} {
-    background-color: #efefef;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 0;
-    padding-top: 0;
-    border-top-left-radius: 15% 50%;
-    border-bottom-left-radius: 15% 50%;
+    padding: 0;
+    min-height: 90vh;
   }
   li {
     background-color: #fff;
-    @media ${device.desktop} {
-      width: 10rem;
-      height: 10rem;
-    }
     width: 7rem;
     height: 7rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 1rem 1rem 0;
+    @media ${device.desktop} {
+      width: 10rem;
+      height: 10rem;
+      margin: 0 3.5rem 1rem 0;
+    }
   }
 `

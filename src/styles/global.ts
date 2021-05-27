@@ -31,7 +31,6 @@ const GlobalStyles = createGlobalStyle`
  li {
     list-style-type: none;
     font-weight: bold;
-    margin-right: 15px;
     color: #333;
     font-size: 2rem;
      @media(min-width: 1200px){
