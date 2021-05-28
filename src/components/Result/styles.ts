@@ -18,7 +18,7 @@ export const ResultContainer = styled.ul`
     min-height: 85vh;
   }
   li {
-    background-color: #fff;
+    background-color: var(--white);
     width: 7rem;
     height: 7rem;
     border-radius: 50%;

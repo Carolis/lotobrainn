@@ -15,9 +15,9 @@ const Footer = (): JSX.Element => {
 const FooterContainer = styled.div`
   font-size: 1.4rem;
   font-weight: 500;
-  color: #000;
+  color: var(--black);
   padding: 2rem;
-  background-color: #efefef;
+  background-color: var(--less-white);
   @media (min-width: 1200px) {
     font-size: 1.6rem;
     padding: 0;

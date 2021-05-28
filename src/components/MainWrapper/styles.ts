@@ -11,7 +11,7 @@ export const MainContainer = styled.div`
 export const MainContentWrapper = styled.div`
   border-top-left-radius: 70% 10%;
   border-top-right-radius: 70% 10%;
-  background-color: #efefef;
+  background-color: var(--less-white);
   min-height: 50vh;
   @media ${device.desktop} {
     width: 75vw;

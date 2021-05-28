@@ -43,7 +43,7 @@ export const DateTimeWrapper = styled.div`
     font-size: 1.4rem;
     letter-spacing: 0.135em;
     font-weight: 500;
-    color: #fff;
+    color: var(--white);
   }
 `
 export const DateTime = styled.span`

@@ -27,7 +27,7 @@ export const Select = styled.select`
   font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
   font-weight: 500;
-  color: #333;
+  color: var(--less-black);
   padding-left: 3rem;
   -webkit-appearance: none;
 `

@@ -1,6 +1,14 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
+
+:root {
+    --white: #fff;
+    --black: #000;
+    --less-black: #333;
+    --less-white: #efefef;
+}
+
  * {
     margin: 0;
     padding: 0;
@@ -9,10 +17,11 @@ const GlobalStyles = createGlobalStyle`
 
  html {
     font-size: 62.5%;
-    background-color: #efefef;
+    background-color: var(--less-white);
  }
 
  body {
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
  }
@@ -23,7 +32,7 @@ const GlobalStyles = createGlobalStyle`
 
  h1 {
     font-size: 3rem;
-    color: #fff;
+    color: var(--white);
     text-transform: uppercase;
     text-align: center;
  }
@@ -31,7 +40,7 @@ const GlobalStyles = createGlobalStyle`
  li {
     list-style-type: none;
     font-weight: bold;
-    color: #333;
+    color: var(--less-black);
     font-size: 2rem;
      @media(min-width: 1200px){
         font-size: 2.7rem;
