@@ -7,15 +7,11 @@ import { normalizeDate } from '../../utils/utils'
 const LotteryDate = (): JSX.Element | null => {
   const { activeLottery } = useLottery()
 
-  const { loading: loadingConcurso, data: concursoData } = useQuery(CONCURSOS, {
+  const { data: concursoData } = useQuery(CONCURSOS, {
     variables: {
       id: activeLottery.activeBet
     }
   })
-
-  if (loadingConcurso) {
-    return <div>Loading</div>
-  }
 
   if (concursoData) {
     const concursoDate = normalizeDate(concursoData?.concurso?.data)

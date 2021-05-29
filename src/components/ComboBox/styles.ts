@@ -20,6 +20,8 @@ export const ComboBoxSelect = styled.div`
   }
 `
 export const Select = styled.select`
+  -webkit-appearance: none;
+  background-color: var(--white);
   border-radius: 1.2rem;
   border: none;
   min-width: 25rem;
@@ -29,5 +31,4 @@ export const Select = styled.select`
   font-weight: 500;
   color: var(--less-black);
   padding-left: 3rem;
-  -webkit-appearance: none;
 `

@@ -10,8 +10,7 @@ import {
   HeaderSidebar,
   StyledLogo,
   LogoWrapper,
-  DateTimeWrapper,
-  DateTime
+  DateTimeWrapper
 } from './styles'
 import { size } from '../../styles/sizes'
 
@@ -35,9 +34,9 @@ const Header = (): JSX.Element => {
         {width >= size.desktop ? (
           <DateTimeWrapper>
             <span>Concurso</span>
-            <DateTime>
-              {activeLottery.activeBet} - <LotteryDate />
-            </DateTime>
+            <span className="concursoDate">
+              {activeLottery.activeBet} – <LotteryDate />
+            </span>
           </DateTimeWrapper>
         ) : (
           <span>Concurso Nº {activeLottery.activeBet}</span>

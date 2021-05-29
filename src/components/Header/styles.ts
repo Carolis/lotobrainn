@@ -45,7 +45,9 @@ export const DateTimeWrapper = styled.div`
     font-weight: 500;
     color: var(--white);
   }
-`
-export const DateTime = styled.span`
-  color: blue;
+  span.concursoDate {
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
 `
