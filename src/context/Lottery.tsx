@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from 'react'
+import React, { createContext, useState, useContext, useEffect } from 'react'
 import { LotteryContextState } from './types'
 
 interface Props {
@@ -24,18 +24,16 @@ const LotteryProvider = ({ children }: Props): JSX.Element => {
     contextDefaultValues.activeLottery
   )
 
-  React.useEffect(() => {
+  useEffect(() => {
     const parsedState = JSON.parse(
       localStorage.getItem('activeLottery') || '{}'
     )
-
     setActiveLottery(parsedState)
   }, [])
 
   const stringifiedState = JSON.stringify(activeLottery)
-  console.log(stringifiedState)
 
-  React.useEffect(() => {
+  useEffect(() => {
     localStorage.setItem('activeLottery', stringifiedState)
   }, [activeLottery])
 
