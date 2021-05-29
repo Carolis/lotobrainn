@@ -8,7 +8,7 @@ interface WindowSize {
 const useWindowSize = (): WindowSize => {
   const isSSR = typeof window !== 'undefined'
   const [windowSize, setWindowSize] = React.useState({
-    width: isSSR ? 800 : window.innerWidth,
+    width: isSSR ? 1200 : window.innerWidth,
     height: isSSR ? 800 : window.innerHeight
   })
 

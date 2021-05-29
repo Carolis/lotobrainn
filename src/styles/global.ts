@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { device } from './sizes'
 
 const GlobalStyles = createGlobalStyle`
 
@@ -23,7 +24,9 @@ const GlobalStyles = createGlobalStyle`
  body {
     font-family: 'Montserrat', sans-serif;
     min-height: 100vh;
-    overflow: hidden;
+    @media ${device.desktop} {
+      overflow: hidden;
+    }
  }
 
  aside, div {
@@ -42,9 +45,9 @@ const GlobalStyles = createGlobalStyle`
     font-weight: bold;
     color: var(--less-black);
     font-size: 2rem;
-     @media(min-width: 1200px){
+    @media ${device.desktop}{
         font-size: 2.7rem;
-     }
+    }
  }
 
 `

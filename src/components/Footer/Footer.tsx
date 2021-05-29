@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { device } from '../../styles/sizes'
 
 const Footer = (): JSX.Element => {
   return (
@@ -18,7 +19,7 @@ const FooterContainer = styled.div`
   color: var(--black);
   padding: 2rem;
   background-color: var(--less-white);
-  @media (min-width: 1200px) {
+  @media ${device.desktop} {
     font-size: 1.6rem;
     padding: 0;
   }
