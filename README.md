@@ -25,6 +25,8 @@ Repositório pessoal com o histórico do desafio: https://github.com/Carolis/lot
 
 [Node](https://github.com/nodejs/node) e [Yarn](https://classic.yarnpkg.com/en/)
 
+Ao acessar a aplicação pela primeira vez garanta que você irá rodar `yarn install` antes de executar a aplicação com `yarn start` no modo desenvolvimento 
+
 ## Decisões de arquitetura da aplicação
 
 CRA com template Typescript
@@ -45,13 +47,9 @@ Cypress
 
 `yarn lint --fix` Para corrigir erros de lint
 
-`yarn test`
+`yarn cypress:open` Para abrir a dashboard de testes do Cypress
 
-`yarn build`
-
-`yarn cypress:open`
-
-`yarn cypress:run`
+`yarn cypress:run` Para rodar os testes do Cypress na CLI
 
 ## Queries usadas na aplicação
 
