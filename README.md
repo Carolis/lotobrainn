@@ -25,6 +25,8 @@ Repositório pessoal com o histórico do desafio: https://github.com/Carolis/lot
 
 [Node](https://github.com/nodejs/node) e [Yarn](https://classic.yarnpkg.com/en/)
 
+Ao acessar a aplicação pela primeira vez garanta que você irá rodar `yarn install` antes de executar a aplicação com `yarn start` no modo desenvolvimento 
+
 ## Decisões de arquitetura da aplicação
 
 CRA com template Typescript
