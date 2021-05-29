@@ -14,7 +14,7 @@ export const ResultContainer = styled.ul`
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0;
+    padding: 0 0 0 2rem;
     min-height: 85vh;
   }
   li {
@@ -29,7 +29,7 @@ export const ResultContainer = styled.ul`
     @media ${device.desktop} {
       width: 10rem;
       height: 10rem;
-      margin: 0 3.5rem 1rem 0;
+      margin: 3rem 3.5rem 1rem 0;
     }
   }
 `

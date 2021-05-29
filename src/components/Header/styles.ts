@@ -11,7 +11,7 @@ export const HeaderSidebar = styled.aside`
   justify-content: space-evenly;
   @media ${device.desktop} {
     height: 100vh;
-    width: 25vw;
+    width: 30vw;
     justify-content: space-between;
     padding: 6rem;
     align-items: flex-start;

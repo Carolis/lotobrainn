@@ -14,7 +14,7 @@ export const MainContentWrapper = styled.div`
   background-color: var(--less-white);
   min-height: 50vh;
   @media ${device.desktop} {
-    width: 75vw;
+    width: 70vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -22,8 +22,8 @@ export const MainContentWrapper = styled.div`
     height: 120vh;
     top: -10vh;
     position: relative;
-    border-top-left-radius: 5% 50%;
-    border-bottom-left-radius: 5% 50%;
+    border-top-left-radius: 15% 50%;
+    border-bottom-left-radius: 15% 50%;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
