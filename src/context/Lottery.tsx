@@ -24,6 +24,21 @@ const LotteryProvider = ({ children }: Props): JSX.Element => {
     contextDefaultValues.activeLottery
   )
 
+  React.useEffect(() => {
+    const parsedState = JSON.parse(
+      localStorage.getItem('activeLottery') || '{}'
+    )
+
+    setActiveLottery(parsedState)
+  }, [])
+
+  const stringifiedState = JSON.stringify(activeLottery)
+  console.log(stringifiedState)
+
+  React.useEffect(() => {
+    localStorage.setItem('activeLottery', stringifiedState)
+  }, [activeLottery])
+
   return (
     <LotteryContext.Provider value={{ activeLottery, setActiveLottery }}>
       {children}
