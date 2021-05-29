@@ -11,6 +11,10 @@
   </p>
 </p>
 
+## Do que eu preciso para rodar essa aplicação?
+
+Node e Yarn
+
 ## Decisões de arquitetura da aplicação
 
 CRA com template Typescript
@@ -21,14 +25,16 @@ GraphQL com Apollo Client
 
 React Router DOM
 
+LocalStorage
+
 Cypress
 
 ## Comandos CLI disponíveis para rodar a aplicação
 
 
-`yarn start`  Roda a aplicação em modo desenvolvimento na porta [http://localhost:3000](http://localhost:3000)
+`yarn start`  Para rodar a aplicação em modo desenvolvimento na porta [http://localhost:3000](http://localhost:3000)
 
-`yarn lint --fix` Corrige erros de lint
+`yarn lint --fix` Para corrigir erros de lint
 
 `yarn test`
 
@@ -38,8 +44,7 @@ Cypress
 
 `yarn cypress:run` 
 
-## Queries disponíveis na aplicação
-
+## Queries usadas na aplicação
 
 `LOTERIAS:` Retorna se o tipo é megasena, quina, lotofacil, lotomania, timemania ou dia de sorte.
 
@@ -76,3 +81,13 @@ query CONCURSOS ($id: ID!) {
   }
 }
 ```
+
+## Extra
+
+Última atualização feita em 29/05/2021
+
+Feito por [Carolis](https://github.com/Carolis)
+
+Para mais informações acesse o [enunciado do teste](https://github.com/brainnco-exs/readme-frontend)
+
+Obrigada!
