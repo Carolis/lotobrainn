@@ -1,5 +1,6 @@
 import React from 'react'
 import ComboBox from '../ComboBox/ComboBox'
+import LotteryDate from '../LotteryDate/LotteryDate'
 import GlobalStyles from '../../styles/global'
 import { useLottery } from '../../context/Lottery'
 import { ThemeProvider } from 'styled-components'
@@ -34,7 +35,9 @@ const Header = (): JSX.Element => {
         {width >= size.desktop ? (
           <DateTimeWrapper>
             <span>Concurso</span>
-            <DateTime>12341234242</DateTime>
+            <DateTime>
+              {activeLottery.activeBet} - <LotteryDate />
+            </DateTime>
           </DateTimeWrapper>
         ) : (
           <span>Concurso Nº {activeLottery.activeBet}</span>
