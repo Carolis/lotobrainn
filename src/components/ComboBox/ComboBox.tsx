@@ -9,6 +9,7 @@ import { CONCURSOS_LOTERIAS } from '../../graphql/ConcursosLoterias'
 import { themeColors } from '../../styles/themes/themes'
 import { ComboBoxSelect, Select } from './styles'
 import Loader from '../Loader/Loader'
+import { normalizeEvent } from '../../utils/utils'
 
 interface Lottery {
   nome: string
@@ -35,9 +36,7 @@ const ComboBox = (): JSX.Element | null => {
     const lotteryActiveId = e.target.children[e.target.selectedIndex].id
 
     let activeTheme = ''
-    const normalizedValue = e.target.value
-      .normalize('NFD')
-      .replace(/-|\s|[^a-zA-Zs]/g, '')
+    const normalizedValue = normalizeEvent(e.target.value)
 
     if (themeColors[normalizedValue]?.length) {
       activeTheme = themeColors[normalizedValue]
