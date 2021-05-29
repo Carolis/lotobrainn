@@ -17,9 +17,13 @@
 
 Link para acessar o projeto online: https://lotobrainn.vercel.app/
 
+Repositório oficial do desafio: https://github.com/brainnco-exs/challenge-carolis
+
+Repositório pessoal com o histórico do desafio: https://github.com/Carolis/lotobrainn
+
 ## Do que eu preciso para rodar essa aplicação?
 
-Node e Yarn
+[Node](https://github.com/nodejs/node) e [Yarn](https://classic.yarnpkg.com/en/)
 
 ## Decisões de arquitetura da aplicação
 
@@ -94,5 +98,7 @@ query CONCURSOS ($id: ID!) {
 Feito por [Carolis](https://github.com/Carolis)
 
 Para mais informações acesse o [enunciado do teste](https://github.com/brainnco-exs/readme-frontend)
+
+Caso seja necessário alguma permissão para o repositório ou quaisquer dúvidas basta me acionar no e-mail `carolinaalecontato@gmail.com`
 
 Obrigada!
