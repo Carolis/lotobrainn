@@ -5,13 +5,13 @@ interface Props {
   children: JSX.Element | JSX.Element[]
 }
 
+const parsedState = JSON.parse(
+  localStorage.getItem('activeLottery') ||
+    '{"name":"mega-sena","id":"0","lotteryTheme":"#6BEFA3","activeBet":"2359"}'
+)
+
 const contextDefaultValues: LotteryContextState = {
-  activeLottery: {
-    name: 'mega-sena',
-    id: '0',
-    lotteryTheme: '#6BEFA3',
-    activeBet: '2359'
-  },
+  activeLottery: parsedState,
   setActiveLottery: () => {
     null
   }
@@ -25,17 +25,18 @@ const LotteryProvider = ({ children }: Props): JSX.Element => {
   )
 
   useEffect(() => {
-    const parsedState = JSON.parse(
-      localStorage.getItem('activeLottery') || '{}'
-    )
-    setActiveLottery(parsedState)
+    if (stringifiedState != '{}') {
+      localStorage.setItem('activeLottery', stringifiedState)
+    }
+  }, [activeLottery])
+
+  useEffect(() => {
+    if (parsedState != '{}') {
+      setActiveLottery(parsedState)
+    }
   }, [])
 
   const stringifiedState = JSON.stringify(activeLottery)
-
-  useEffect(() => {
-    localStorage.setItem('activeLottery', stringifiedState)
-  }, [activeLottery])
 
   return (
     <LotteryContext.Provider value={{ activeLottery, setActiveLottery }}>

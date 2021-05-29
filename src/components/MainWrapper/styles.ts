@@ -19,7 +19,9 @@ export const MainContentWrapper = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 120vh;
+    top: -10vh;
+    position: relative;
     border-top-left-radius: 5% 50%;
     border-bottom-left-radius: 5% 50%;
     border-top-right-radius: 0;
