@@ -15,7 +15,7 @@ import {
 import { size } from '../../styles/sizes'
 
 const Header = (): JSX.Element => {
-  const { width } = useWindowSize()
+  const windowSize = useWindowSize()
   const { activeLottery } = useLottery()
   const theme = {
     colors: {
@@ -32,7 +32,7 @@ const Header = (): JSX.Element => {
           <HeaderTitle>{activeLottery.name}</HeaderTitle>
         </LogoWrapper>
         <DateTimeWrapper>
-          {width >= size.desktop ? (
+          {windowSize.width >= size.desktop ? (
             <>
               <span>Concurso</span>
               <span className="concursoDate">
