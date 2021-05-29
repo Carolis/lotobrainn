@@ -31,16 +31,18 @@ const Header = (): JSX.Element => {
           <StyledLogo />
           <HeaderTitle>{activeLottery.name}</HeaderTitle>
         </LogoWrapper>
-        {width >= size.desktop ? (
-          <DateTimeWrapper>
-            <span>Concurso</span>
-            <span className="concursoDate">
-              {activeLottery.activeBet} – <LotteryDate />
-            </span>
-          </DateTimeWrapper>
-        ) : (
-          <span>Concurso Nº {activeLottery.activeBet}</span>
-        )}
+        <DateTimeWrapper>
+          {width >= size.desktop ? (
+            <>
+              <span>Concurso</span>
+              <span className="concursoDate">
+                {activeLottery.activeBet} – <LotteryDate />
+              </span>
+            </>
+          ) : (
+            <span>Concurso Nº {activeLottery.activeBet}</span>
+          )}
+        </DateTimeWrapper>
       </HeaderSidebar>
     </ThemeProvider>
   )

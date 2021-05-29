@@ -35,13 +35,10 @@ export const LogoWrapper = styled.div`
   }
 `
 export const DateTimeWrapper = styled.div`
-  display: flex;
+  text-align: center;
   text-transform: uppercase;
-  flex-direction: column;
-  text-align: left;
   span {
     font-size: 1.4rem;
-    letter-spacing: 0.135em;
     font-weight: 500;
     color: var(--white);
   }
@@ -49,5 +46,17 @@ export const DateTimeWrapper = styled.div`
     font-weight: bold;
     font-size: 2rem;
     letter-spacing: 0;
+  }
+  @media ${device.desktop} {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    span {
+      font-size: 1.4rem;
+      letter-spacing: 0.135em;
+      font-weight: 500;
+      color: var(--white);
+      letter-spacing: 0.135em;
+    }
   }
 `
