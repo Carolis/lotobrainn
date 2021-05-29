@@ -11,6 +11,12 @@
   </p>
 </p>
 
+<h2 align="center"><img src=".github/assets/DXQQuSBLut.gif" alt="Gif mostrando a responsividade da aplicação" width="100%"></h2>
+
+# Lotobrainn
+
+Link para acessar o projeto online: https://lotobrainn.vercel.app/
+
 ## Do que eu preciso para rodar essa aplicação?
 
 Node e Yarn
@@ -29,10 +35,9 @@ LocalStorage
 
 Cypress
 
-## Comandos CLI disponíveis para rodar a aplicação
+## Comandos CLI disponíveis para rodar na aplicação
 
-
-`yarn start`  Para rodar a aplicação em modo desenvolvimento na porta [http://localhost:3000](http://localhost:3000)
+`yarn start` Para rodar a aplicação em modo desenvolvimento na porta [http://localhost:3000](http://localhost:3000)
 
 `yarn lint --fix` Para corrigir erros de lint
 
@@ -40,9 +45,9 @@ Cypress
 
 `yarn build`
 
-`yarn cypress:open` 
+`yarn cypress:open`
 
-`yarn cypress:run` 
+`yarn cypress:run`
 
 ## Queries usadas na aplicação
 
@@ -82,7 +87,7 @@ query CONCURSOS ($id: ID!) {
 }
 ```
 
-## Extra
+## Informações Extra
 
 Última atualização feita em 29/05/2021
 
