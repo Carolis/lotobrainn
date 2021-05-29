@@ -47,13 +47,9 @@ Cypress
 
 `yarn lint --fix` Para corrigir erros de lint
 
-`yarn test`
+`yarn cypress:open` Para abrir a dashboard de testes do Cypress
 
-`yarn build`
-
-`yarn cypress:open`
-
-`yarn cypress:run`
+`yarn cypress:run` Para rodar os testes do Cypress na CLI
 
 ## Queries usadas na aplicação
 
